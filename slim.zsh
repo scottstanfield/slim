@@ -2,7 +2,7 @@ slim_path=`dirname $0`
 fpath=( $slim_path $fpath )
 
 autoload -U promptinit && promptinit
-prompt pure
+prompt pure1
 
 autoload -U compinit
 compinit

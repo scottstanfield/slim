@@ -3,10 +3,12 @@ export BLOCK_SIZE="'1"
 # setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
 
 # Detect which 'ls' flavor to use
-if ls --version > /dev/null 2>&1; then # OS X version of ls
-    lsflag="-GF"
-else # GNU version of ls
-    lsflag="--color --group-directories-first -F"
+ls --color -d . >/dev/null 2>&1 && color_ls=1 || color_ls=0
+
+if [[ $color_ls ]] then 
+    lsflag="--color --group-directories-first -F"   # GNU version
+else 
+    lsflag="-GF"   # for BSD / OSX version
 fi
 
 alias ls="command ls ${lsflag}"

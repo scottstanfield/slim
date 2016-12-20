@@ -11,6 +11,7 @@ function my_highlights {
 
 	# underscore paths and filenames that are incomplete while typing
 	ZSH_HIGHLIGHT_STYLES[path_prefix]=underline
+	ZSH_HIGHLIGHT_STYLES[comment]=fg=yellow
 }
 
 my_highlights

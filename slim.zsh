@@ -1,4 +1,4 @@
-# vim:set ft=vim et sw=2:
+# vim: set ft=zsh tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab:
 
 slim_path=`dirname $0`
 fpath=( $slim_path $fpath ~/slim/pure1)
@@ -16,11 +16,7 @@ unsetopt correct_all
 
 COMPLETION_WAITING_DOTS="true"
 
-
-#export CLICOLOR=1
-
-source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $slim_path/keys.zsh
+source $slim_path/bindkeys.zsh
 source $slim_path/history.zsh
 source $slim_path/completion.zsh
 source $slim_path/stack.zsh
@@ -28,6 +24,7 @@ source $slim_path/ls.zsh
 source $slim_path/less.zsh
 source $slim_path/scott.zsh
 source $slim_path/functions.zsh
+source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim_path/highlights.zsh
 
 if command -v fasd >/dev/null 2>&1; then
@@ -38,3 +35,4 @@ fi
 if [[ -f $slim_path/etc.zsh.local ]]; then
   source $slim_path/etc.zsh.local
 fi
+

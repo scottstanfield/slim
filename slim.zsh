@@ -1,5 +1,5 @@
 slim_path=`dirname $0`
-fpath=( $slim_path $fpath )
+fpath=( $slim_path $fpath ~/slim/pure1)
 
 autoload -U promptinit && promptinit
 prompt pure1

@@ -1,9 +1,4 @@
 
-DISABLE_AUTO_UPDATE="true"
-DISABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 function my_highlights {
 	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 	ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=white,bold,bg=red')

@@ -11,6 +11,13 @@ setopt autocd
 setopt extendedglob
 setopt NO_NOMATCH
 
+DISABLE_AUTO_UPDATE="true"
+DISABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+
+
 export CLICOLOR=1
 
 source $slim_path/keys.zsh
@@ -20,7 +27,7 @@ source $slim_path/stack.zsh
 source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim_path/ls.zsh
 source $slim_path/less.zsh
-source $slim_path/myhighlights.zsh
+source $slim_path/highlights.zsh
 source $slim_path/scott.zsh
 source $slim_path/functions.zsh
 

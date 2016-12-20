@@ -1,3 +1,5 @@
+# vim:set ft=vim et sw=2:
+
 slim_path=`dirname $0`
 fpath=( $slim_path $fpath ~/slim/pure1)
 
@@ -10,26 +12,23 @@ compinit
 setopt autocd
 setopt extendedglob
 setopt NO_NOMATCH
+unsetopt correct_all
 
-DISABLE_AUTO_UPDATE="true"
-DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
+#export CLICOLOR=1
 
-export CLICOLOR=1
-
+source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim_path/keys.zsh
 source $slim_path/history.zsh
 source $slim_path/completion.zsh
 source $slim_path/stack.zsh
-source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim_path/ls.zsh
 source $slim_path/less.zsh
-source $slim_path/highlights.zsh
 source $slim_path/scott.zsh
 source $slim_path/functions.zsh
+source $slim_path/highlights.zsh
 
 if command -v fasd >/dev/null 2>&1; then
   eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install posix-alias)"

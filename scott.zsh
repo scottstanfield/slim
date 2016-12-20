@@ -16,10 +16,10 @@ alias -- pd='pushd'
 alias rm='nocorrect rm -vI'
 alias soz="source ~/zclean/scott.zsh"
 alias sz="source ~/.zshrc"
-alias vimrc="vi ~/.config/nvim/init.vim"
-alias vi="nvim -p"
-alias vit="vi ~/.tmux.conf"
-alias viz="vi ~/zclean/scott.zsh"
+alias vimrc="vim ~/.config/nvim/init.vim"
+alias vi="vim -p"
+alias vit="vim ~/.tmux.conf"
+
 
 
 # GIT
@@ -42,5 +42,3 @@ bindkey '^n' history-search-forward
 bindkey "\e[3~" delete-char         	# DEL does the right thing
 bindkey "\e[1;5D" backward-word     	# ⌃← skips back a word
 bindkey "\e[1;5C" forward-word      	# ⌃→ skips forward a word
-bindkey '^[OM' '^M' 			# zsh "xterm with numeric keypad" ignoring the keypad Enter key
-

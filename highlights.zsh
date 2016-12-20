@@ -8,7 +8,9 @@ function my_highlights {
 	ZSH_HIGHLIGHT_STYLES[command]=fg=blue
 	ZSH_HIGHLIGHT_STYLES[alias]=fg=blue
 	ZSH_HIGHLIGHT_STYLES[function]=fg=blue
-}
 
+	# underscore paths and filenames that are incomplete while typing
+	ZSH_HIGHLIGHT_STYLES[path_prefix]=underline
+}
 
 my_highlights

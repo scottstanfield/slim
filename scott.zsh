@@ -27,6 +27,8 @@ alias gs='git status 2>/dev/null'
 alias gd='git diff'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 function gg() { git commit -m "$*" }
+#function gga() { echo "first: $@[1] \n rest: $@[2, -1]" }
+function gga() { git add $@[1] && git commit -m "$*[2, -1]" }
 
 # alias-like functions
 function ff () { find . -iname "$1*" -print }

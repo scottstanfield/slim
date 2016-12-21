@@ -1,3 +1,12 @@
+# BINDKEY 
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey "\e[3~" delete-char         	# DEL does the right thing
+bindkey "\e[1;5D" backward-word     	# ⌃← skips back a word
+bindkey "\e[1;5C" forward-word      	# ⌃→ skips forward a word
+bindkey ' ' magic-space
+
+# from original slim
 bindkey -e
 bindkey '\ew' kill-region
 bindkey -s '\el' "ls\n"
@@ -11,7 +20,6 @@ bindkey "^[[1~" beginning-of-line
 bindkey "^[OH" beginning-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[OF" end-of-line
-bindkey ' ' magic-space
 bindkey "^F" forward-word
 bindkey "^B" backward-word
 bindkey '^[[Z' reverse-menu-complete

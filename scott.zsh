@@ -38,9 +38,3 @@ function sst () {/usr/bin/ssh -t $@ "tmux attach || tmux new";}
 function take () { mkdir -p $1 && cd $1 }
 function zman() { PAGER="less -g -s '+/^       "$1"'" man zshall }
 
-# BINDKEY 
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey "\e[3~" delete-char         	# DEL does the right thing
-bindkey "\e[1;5D" backward-word     	# ⌃← skips back a word
-bindkey "\e[1;5C" forward-word      	# ⌃→ skips forward a word

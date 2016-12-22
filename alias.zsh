@@ -1,8 +1,3 @@
-setopt interactive_comments  # allows these # comments in shell; good for copy/paste
-setopt pushd_ignore_dups     # skip duplicate dirs when you usse pushd
-setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
-
-
 # neovim (nvim) >> vim >> vi
 # $EDITOR is set in .zshenv
 alias vi="$EDITOR -p"
@@ -26,6 +21,7 @@ alias rm='nocorrect rm -vI'
 alias soz="source ~/zclean/scott.zsh"
 alias sz="source ~/.zshrc"
 alias m="less"
+alias dh='dirs -v'
 
 ####
 # LS

@@ -2,7 +2,19 @@ setopt interactive_comments  # allows these # comments in shell; good for copy/p
 setopt pushd_ignore_dups     # skip duplicate dirs when you usse pushd
 setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
 
-export EDITOR=vim
+
+# neovim (nvim) >> vim >> vi
+# If nvim is installed, use that, otherwise vim. But alias vi to either.
+#
+command -v "nvim" &> /dev/null && vic="nvim" || vic="vim"
+alias vi="${vic} -p"
+export EDITOR=${vic}
+
+if [[ $vic == "nvim" ]] then
+	alias vimrc="nvim ~/.config/nvim/init.vim" 
+else
+	alias vimrc="vim ~/.vimrc"
+fi
 
 # misc aliases
 alias ag="ag --smart-case --literal "       
@@ -16,9 +28,7 @@ alias -- pd='pushd'
 alias rm='nocorrect rm -vI'
 alias soz="source ~/zclean/scott.zsh"
 alias sz="source ~/.zshrc"
-alias vimrc="vim ~/.config/nvim/init.vim"
-alias vi="vim -p"
-alias vit="vim ~/.tmux.conf"
+
 
 
 

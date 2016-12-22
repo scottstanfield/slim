@@ -36,9 +36,10 @@ else
 fi
 
 alias ls="command ls ${lsflag}"
-alias ll="ls -l ${lsflag}"
+alias ll="ls -lG ${lsflag}"			# drop the group
 alias la="ls -a ${lsflag}"
-alias lla="ls -la ${lsflag}"
+alias lla="ls -laG ${lsflag}"
+alias lll="ls -al ${lsflag}"			# really show all
 
 # Automatically ls after you change directories (cd).
 # Comment out this function if it's annoying.

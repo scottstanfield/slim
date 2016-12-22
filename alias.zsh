@@ -38,6 +38,7 @@ fi
 alias ls="command ls ${lsflag}"
 alias ll="ls -l ${lsflag}"
 alias la="ls -a ${lsflag}"
+alias lla="ls -la ${lsflag}"
 
 # Automatically ls after you change directories (cd).
 # Comment out this function if it's annoying.

@@ -1,6 +1,12 @@
 # FUNCTIONS
 is_mac() { [[ $OSTYPE == darwin* ]] }
 
+acme() {
+	autoload colors; colors
+	rc=$reset_color
+	print -- $fg[blue] \⚛ $rc "$@"
+}
+
 cpath() {
   # colorful print of the path variable
   echo $PATH | tr ":" "\n" | \

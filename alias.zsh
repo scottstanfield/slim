@@ -4,13 +4,10 @@ setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
 
 
 # neovim (nvim) >> vim >> vi
-# If nvim is installed, use that, otherwise vim. But alias vi to either.
-#
-command -v "nvim" &> /dev/null && vic="nvim" || vic="vim"
-alias vi="${vic} -p"
-export EDITOR=${vic}
+# $EDITOR is set in .zshenv
+alias vi="$EDITOR -p"
 
-if [[ $vic == "nvim" ]] then
+if [[ $EDITOR == "nvim" ]] then
 	alias vimrc="nvim ~/.config/nvim/init.vim" 
 else
 	alias vimrc="vim ~/.vimrc"
@@ -28,6 +25,30 @@ alias -- pd='pushd'
 alias rm='nocorrect rm -vI'
 alias soz="source ~/zclean/scott.zsh"
 alias sz="source ~/.zshrc"
+alias m="less"
+
+####
+# LS
+# setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
+# Detect which 'ls' flavor to use
+ls --color -d . &> /dev/null && color_ls=1 || color_ls=0
+
+if [[ $color_ls ]] then 
+    lsflag="--color --group-directories-first -F"   # GNU version
+else 
+    lsflag="-GF"   # for BSD / OSX version
+fi
+
+alias ls="command ls ${lsflag}"
+alias ll="ls -l ${lsflag}"
+alias la="ls -a ${lsflag}"
+
+# Automatically ls after you change directories (cd).
+# Comment out this function if it's annoying.
+function chpwd() {
+	emulate -L zsh
+	ls
+}
 
 
 

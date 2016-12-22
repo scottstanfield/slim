@@ -22,7 +22,7 @@ source $slim_path/completion.zsh
 source $slim_path/stack.zsh
 source $slim_path/ls.zsh
 source $slim_path/less.zsh
-source $slim_path/scott.zsh
+source $slim_path/alias.zsh
 source $slim_path/functions.zsh
 source $slim_path/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim_path/highlights.zsh

@@ -3,7 +3,7 @@ export BLOCK_SIZE="'1"
 # setopt extended_glob		 # treat #, ~ and ^ as patterns for filename generation
 
 # Detect which 'ls' flavor to use
-ls --color -d . >/dev/null 2>&1 && color_ls=1 || color_ls=0
+ls --color -d . &> /dev/null && color_ls=1 || color_ls=0
 
 if [[ $color_ls ]] then 
     lsflag="--color --group-directories-first -F"   # GNU version

@@ -22,6 +22,7 @@ alias soz="source ~/zclean/scott.zsh"
 alias sz="source ~/.zshrc"
 alias m="less"
 alias dh='dirs -v'
+alias pigz='pigz --best -k'
 
 ####
 # LS

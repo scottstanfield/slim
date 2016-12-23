@@ -3,6 +3,11 @@ export LANG="${LANGUAGE}"
 export LC_ALL="${LANGUAGE}"
 export LC_CTYPE="${LANGUAGE}"
 
+# C compiler
+export CCFLAGS=-O3
+export CFLAGS=-O3
+export CC=-O3
+
 # PATH
 export PATH=~/bin:"$PATH"
 

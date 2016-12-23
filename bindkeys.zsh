@@ -1,4 +1,5 @@
 # BINDKEY 
+bindkey -e								# Critical to make the normal movement keys work
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey "\e[3~" delete-char         	# DEL does the right thing

@@ -30,14 +30,26 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
+setopt share_history
 
 COMPLETION_WAITING_DOTS="true"
 
-source $slim/ssh-agent.zsh
 source $slim/bindkeys.zsh
 source $slim/completion.zsh
 source $slim/alias.zsh
 source $slim/functions.zsh
 source $slim/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $slim/highlights.zsh
+
+
+SSHPID=`ps ax|grep -c "[s]sh-agent"`
+if (( $SSHPID == 0 ))
+then
+    ssh-agent > ~/.ssh-env
+    source ~/.ssh-env
+    ssh-add
+else
+    source ~/.ssh-env
+fi
+
 

@@ -23,6 +23,7 @@ alias sz="source ~/.zshrc"
 alias m="less"
 alias dh='dirs -v'
 alias pigz='pigz --best -k'
+alias make='make --no-print-directory'
 
 ####
 # LS

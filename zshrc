@@ -3,15 +3,15 @@
 umask 022
 
 slim="${HOME}/slim"
-fpath=( $slim $fpath ~/slim/pure1)
+fpath=( $slim $fpath ~/slim/impure)
 
 # load built-in modules
 autoload -U colors     && colors
 autoload -U promptinit && promptinit
 autoload -U compinit   && compinit
 
-# Use my Pure1 prompt
-prompt pure1
+# unpure prompt derives from pure prompt
+prompt impure
 
 setopt autocd
 setopt extendedglob

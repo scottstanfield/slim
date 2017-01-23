@@ -9,7 +9,7 @@ export LC_CTYPE="${LANGUAGE}"
 # export CC+=-O3
 
 # PATH
-export PATH=~/bin:"$PATH"
+export PATH=~/bin:"$PATH:."
 
 # EDITOR nvim >> vim
 command -v "nvim" &> /dev/null && vic="nvim" || vic="vim"

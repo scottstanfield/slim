@@ -7,7 +7,7 @@ acme() {
 	print -- $fg[blue] \⚛ $rc "$@"
 }
 
-cpath() {
+path() {
   # colorful print of the path variable
   echo $PATH | tr ":" "\n" | \
     awk "{ sub(\"/usr\",   \"$fg_no_bold[green]/usr$reset_color\"); \

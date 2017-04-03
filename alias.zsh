@@ -24,6 +24,8 @@ alias m="less"
 alias dh='dirs -v'
 alias pigz='pigz --best -k'
 alias make='make --no-print-directory'
+alias r='R --no-save'
+alias R='R --no-save'
 
 ####
 # LS
@@ -51,6 +53,9 @@ function chpwd() {
 }
 
 
+# GREP
+function g() { grep --color=always "$*" }
+function gl() { grep --color=always "$*" | less }
 
 
 # GIT

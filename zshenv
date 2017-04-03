@@ -42,3 +42,7 @@ export SAVEHIST=100000
 export HISTCONTROL=ignoredups
 
 [[ -f ~/.secret ]] && source ~/.secret
+
+export MODEL=ocean2
+export RADIUM=$HOME/e9/radium/out
+export H2OSERVER=ss-imac.e9.ai
